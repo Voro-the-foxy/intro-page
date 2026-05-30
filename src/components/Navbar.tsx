@@ -8,9 +8,6 @@ export function Navbar() {
         <a href="#features" className="text-sm text-gray-500 hover:text-black transition-colors hidden sm:block">
           Features
         </a>
-        <a href="#about" className="text-sm text-gray-500 hover:text-black transition-colors hidden sm:block">
-          About
-        </a>
         <a
           href="https://voro-nine.vercel.app"
           target="_blank"

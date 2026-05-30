@@ -1,39 +1,49 @@
-const FEATURES = [
+import { FileText, Bot, Bell, BookOpen, AlarmClock, BarChart3 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { FadeIn } from '../components/FadeIn'
+
+interface Feature {
+  icon: LucideIcon
+  title: string
+  description: string
+}
+
+const FEATURES: Feature[] = [
   {
-    icon: "📄",
-    title: "Upload & Ingest",
+    icon: FileText,
+    title: "Upload Your Lecture Materials",
     description:
-      "Upload any PDF lecture material. Voro extracts the text, chunks it semantically, and stores it as vector embeddings for intelligent retrieval.",
+      "Drop in a PDF right after class and Voro indexes every page. Every quiz question is drawn strictly from your own notes — no hallucinations, no off-topic content.",
   },
   {
-    icon: "🤖",
+    icon: Bot,
     title: "AI Quiz Generation",
     description:
-      "Claude generates multiple-choice questions grounded strictly in your material — no hallucinations, no off-topic content. Each question is validated for quality.",
+      "Claude reads your lecture slides and generates focused multiple-choice questions in under a minute. Grounded in your content, validated for accuracy and clarity.",
   },
   {
-    icon: "⏰",
-    title: "Alarm & Schedule",
+    icon: Bell,
+    title: "Before & After Class Alerts",
     description:
-      "Set study alarms and manage your weekly class schedule. Never miss a session with configurable reminders.",
+      "Voro reads your timetable and fires a quiz nudge 10 minutes before class to prime your memory, and again 10 minutes after to lock in what you just learned.",
   },
   {
-    icon: "🎓",
-    title: "Exam Day Tracker",
+    icon: BookOpen,
+    title: "Exam-Mode Intensity",
     description:
-      "Track upcoming exams by subject. Get notified ahead of time so you can plan your preparation without last-minute panic.",
+      "Mark an upcoming exam and Voro shifts into high gear — more frequent reminders, targeted review sessions, and a daily countdown so you never cram the night before.",
   },
   {
-    icon: "📊",
-    title: "Attempt History",
+    icon: AlarmClock,
+    title: "Custom Study Alarms",
     description:
-      "Review every quiz you've taken. See your score, which questions you got wrong, and how you've improved over time.",
+      "Night owl or early bird? Set alarms at any time you choose. Voro pings you when you're ready — not when a generic calendar says so.",
   },
   {
-    icon: "📱",
-    title: "Mobile First",
+    icon: BarChart3,
+    title: "Track Your Progress",
     description:
-      "Designed for the phone you always have with you. Works as a web app today — native iOS and Android coming soon via Capacitor.",
+      "Every quiz attempt is saved. Review your score history, identify weak spots, and watch your retention improve session by session.",
   },
 ]
 
@@ -41,23 +51,26 @@ export function Features() {
   return (
     <section id="features" className="py-24 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Everything you need to ace your exams</h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            From ingesting raw notes to drilling with AI-generated quizzes — Voro covers the full study loop.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">The full micro-learning loop, in one app</h2>
+            <p className="text-gray-500 text-lg max-w-xl mx-auto">
+              Upload → generate → get notified → quiz → repeat. That's how lasting knowledge is built.
+            </p>
+          </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {FEATURES.map((f) => (
-            <div
-              key={f.title}
-              className="border border-black rounded-2xl p-6 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-shadow"
-            >
-              <div className="text-3xl mb-4">{f.icon}</div>
-              <h3 className="font-semibold text-base mb-2">{f.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{f.description}</p>
-            </div>
+          {FEATURES.map((f, i) => (
+            <FadeIn key={f.title} delay={i * 80}>
+              <div className="border border-black rounded-2xl p-6 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-shadow h-full">
+                <div className="mb-4 text-black">
+                  <f.icon size={28} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-semibold text-base mb-2">{f.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{f.description}</p>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </div>
