@@ -1,7 +1,18 @@
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
+
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 bg-white text-black">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 bg-white text-black relative">
       <div className="max-w-2xl mx-auto text-center">
+        <div className="flex justify-center mb-4">
+          <DotLottieReact
+            src="/voro_2.lottie"
+            autoplay
+            loop
+            style={{ width: 140, height: 140 }}
+          />
+        </div>
+
         <div className="inline-flex items-center gap-2 border border-black rounded-full px-4 py-1.5 text-xs font-medium mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-black inline-block" />
           AI-powered study assistant
