@@ -37,8 +37,8 @@ export function HowItWorks() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {STEPS.map((s, i) => (
             <FadeIn key={s.step} delay={i * 120}>
-              <div className="relative z-10">
-                <div className="text-4xl font-extrabold text-gray-700 mb-4">{s.step}</div>
+              <div className="border-2 border-white rounded-sm p-5 sketch shadow-[3px_3px_0_0_rgba(255,255,255,0.4)]">
+                <div className="text-4xl font-extrabold text-gray-600 mb-4">{s.step}</div>
                 <h3 className="font-semibold text-lg mb-2">{s.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{s.description}</p>
               </div>

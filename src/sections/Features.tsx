@@ -49,7 +49,7 @@ const FEATURES: Feature[] = [
 
 export function Features() {
   return (
-    <section id="features" className="py-24 px-6 bg-white">
+    <section id="features" className="py-24 px-6 bg-paper">
       <div className="max-w-5xl mx-auto">
         <FadeIn>
           <div className="text-center mb-16">
@@ -63,7 +63,7 @@ export function Features() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {FEATURES.map((f, i) => (
             <FadeIn key={f.title} delay={i * 80}>
-              <div className="border border-black rounded-2xl p-6 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-shadow h-full">
+              <div className="border-2 border-black rounded-sm p-6 sketch shadow-[3px_3px_0_0_rgba(0,0,0,1)] bg-paper hover:bg-paper-dark transition-colors h-full">
                 <div className="mb-4 text-black">
                   <f.icon size={28} strokeWidth={1.5} />
                 </div>

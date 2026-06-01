@@ -1,6 +1,6 @@
 export function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-paper border-b-2 border-black sketch">
       <a href="/" className="font-extrabold text-lg tracking-tight">
         voro
       </a>
@@ -12,7 +12,7 @@ export function Navbar() {
           href="https://voro-nine.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+          className="px-4 py-2 bg-black text-white text-sm rounded-sm border-2 border-black sketch shadow-[2px_2px_0_0_rgba(0,0,0,0.3)] hover:bg-gray-900 active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-transform"
         >
           Open app
         </a>

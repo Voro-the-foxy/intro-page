@@ -16,7 +16,7 @@ export function CTA() {
             href="https://voro-nine.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-10 py-4 bg-white text-black text-sm font-bold rounded-xl hover:bg-gray-100 transition-colors"
+            className="inline-block px-10 py-4 bg-paper text-black text-sm border-2 border-paper rounded-sm sketch shadow-[3px_3px_0_0_rgba(255,255,255,0.4)] hover:bg-paper-dark active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-transform"
           >
             Try Voro for free →
           </a>
