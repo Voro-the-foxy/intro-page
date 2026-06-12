@@ -1,5 +1,8 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
+import { Smartphone } from 'lucide-react'
 import { FadeIn } from '../components/FadeIn'
+
+const APK_URL = 'https://github.com/Voro-the-foxy/Voro/releases/latest/download/app-release.apk'
 
 export function Hero() {
   return (
@@ -53,6 +56,13 @@ export function Hero() {
               className="px-8 py-3.5 bg-black text-white text-sm rounded-sm border-2 border-black sketch shadow-[3px_3px_0_0_rgba(0,0,0,0.3)] hover:bg-gray-900 active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-transform"
             >
               Try Voro →
+            </a>
+            <a
+              href={APK_URL}
+              className="px-8 py-3.5 border-2 border-black text-black text-sm rounded-sm sketch shadow-[3px_3px_0_0_rgba(0,0,0,1)] bg-paper hover:bg-paper-dark active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-transform inline-flex items-center justify-center gap-2"
+            >
+              <Smartphone size={15} />
+              Download APK
             </a>
             <a
               href="#features"
