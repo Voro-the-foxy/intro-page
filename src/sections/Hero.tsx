@@ -1,8 +1,9 @@
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-import { Smartphone } from 'lucide-react'
-import { FadeIn } from '../components/FadeIn'
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { Smartphone } from "lucide-react";
+import { FadeIn } from "../components/FadeIn";
 
-const APK_URL = 'https://github.com/Voro-the-foxy/Voro/releases/latest/download/app-release.apk'
+const APK_URL =
+  "https://github.com/Voro-the-foxy/Voro/releases/latest/download/app-release.apk";
 
 export function Hero() {
   return (
@@ -35,15 +36,18 @@ export function Hero() {
 
         <FadeIn delay={200}>
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-            Small sessions.<br />Big results.
+            Small sessions.
+            <br />
+            Big results.
           </h1>
         </FadeIn>
 
         <FadeIn delay={300}>
           <p className="text-lg text-gray-500 leading-relaxed mb-10 max-w-xl mx-auto">
-            Voro turns your lecture materials into short, focused quiz sessions —
-            triggered by smart notifications before and after each class, during exam season,
-            or whenever you choose. Micro-learning that fits into your day, every day.
+            Voro turns your lecture materials into short, focused quiz sessions
+            — triggered by smart notifications before and after each class,
+            during exam season, or whenever you choose. Micro-learning that fits
+            into your day, every day.
           </p>
         </FadeIn>
 
@@ -72,13 +76,37 @@ export function Hero() {
             </a>
           </div>
         </FadeIn>
+
+        <FadeIn delay={500}>
+          <div className="mt-12 border-2 border-black rounded-sm sketch shadow-[4px_4px_0_0_rgba(0,0,0,1)] overflow-hidden max-w-xs mx-auto">
+            <video
+              src="/voro_demo_v1.mp4"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full block"
+            />
+          </div>
+        </FadeIn>
       </div>
 
       <div className="absolute bottom-8 animate-bounce">
-        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        <svg
+          className="w-5 h-5 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </div>
     </section>
-  )
+  );
 }
